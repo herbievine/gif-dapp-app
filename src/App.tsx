@@ -26,6 +26,8 @@ const App = ({}: AppProps) => {
 
       setProvider(window.solana);
       setAddress(publicKey.toString());
+    } else {
+      window.open("https://phantom.app/", "_blank");
     }
   };
 
