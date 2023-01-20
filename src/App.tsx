@@ -5,6 +5,7 @@ import { getKeyPair } from "./lib/keypair";
 import { displayAddress } from "./lib/address";
 import { getProvider } from "./lib/provider";
 import { PublicKey } from "@solana/web3.js";
+import Phantom from "./assets/Phantom";
 
 type AppProps = React.PropsWithChildren<{}>;
 
@@ -118,7 +119,6 @@ const App = ({}: AppProps) => {
   useEffect(() => {
     if (address) {
       getGifList();
-      console.log("GIFs fetched", gifs);
     }
   }, [address]);
 
@@ -206,10 +206,11 @@ const App = ({}: AppProps) => {
               </button>
             ) : (
               <button
-                className="bg-neutral-100 text-neutral-900 px-6 py-2 rounded-lg font-bold"
+                className="flex items-center bg-neutral-100 text-neutral-900 px-6 py-2 rounded-lg font-bold space-x-2"
                 onClick={connect}
               >
-                Connect
+                <span>Connect w/</span>
+                <Phantom height={20} />
               </button>
             )}
           </div>
