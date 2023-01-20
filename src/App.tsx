@@ -112,7 +112,7 @@ const App = ({}: AppProps) => {
   };
 
   useEffect(() => {
-    // connect();
+    connect();
   }, []);
 
   useEffect(() => {
