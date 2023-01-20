@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "gen": "node ./scripts/createKeyPair",
     "preview": "vite preview"
   },
   "dependencies": {

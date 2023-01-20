@@ -20,7 +20,7 @@ const App = ({}: AppProps) => {
   const connect = async () => {
     if (window.solana) {
       const { publicKey } = await window.solana.connect({
-        onlyIfTrusted: true,
+        onlyIfTrusted: false,
       });
 
       setProvider(window.solana);
@@ -112,7 +112,7 @@ const App = ({}: AppProps) => {
   };
 
   useEffect(() => {
-    connect();
+    // connect();
   }, []);
 
   useEffect(() => {
